@@ -11,7 +11,7 @@ function MainBlock() {
     const [ lat, setLat ] = useState( " " );
     const [ lon, setLon ] = useState( " " );
 
-    const [ cityName, setCityName ] = useState( "" );
+    const [ cityName, setCityName ] = useState( "Los Angeles" );
 
     useEffect( () => {
         async function getCoordinates() {
@@ -50,7 +50,6 @@ function MainBlock() {
 
             setWeatherData( data );
             console.log( data );
-            console.log( data.list[0].main.temp );
         } catch( error ) {
             setWeatherData( ` Error: ${ error } ` );
         }
@@ -62,7 +61,7 @@ function MainBlock() {
 
             <SearchBlock cityName={ cityName } setCityName={ setCityName } getWeather={ getWeather } />
             
-            <h1 className="text-xl font-medium mt-5 ml-1"> { typeof weatherData !== "string" ? `${ weatherData.city.name }, ` : " " } { typeof weatherData !== "string" ? weatherData.city.country : " " } </h1>
+            <h1 className="text-2xl font-medium mt-5 ml-1"> { typeof weatherData !== "string" ? `${ weatherData.city.name }, ` : " " } { typeof weatherData !== "string" ? weatherData.city.country : " " } </h1>
 
             <WeatherBlock weatherData={ weatherData } />
         </div>
