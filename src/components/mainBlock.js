@@ -56,12 +56,12 @@ function MainBlock() {
     }
 
     return (
-        <div className='px-5 py-5'>
-            <h1 className="text-3xl"> Weather </h1>
+        <div className='px-5 py-5 md:px-14 lg:px-20 md:py-8'>
+            <h1 className="text-3xl sm:text-4xl"> Weather </h1>
 
             <SearchBlock cityName={ cityName } setCityName={ setCityName } getWeather={ getWeather } />
             
-            <h1 className="text-2xl font-medium mt-5 ml-1"> { typeof weatherData !== "string" ? `${ weatherData.city.name }, ` : " " } { typeof weatherData !== "string" ? weatherData.city.country : " " } </h1>
+            <h1 className="text-2xl font-medium mt-5 ml-2 sm:text-3xl"> { typeof weatherData !== "string" ? `${ weatherData.city.name }, ` : " " } { typeof weatherData !== "string" ? weatherData.city.country : " " } </h1>
 
             <WeatherBlock weatherData={ weatherData } />
         </div>
