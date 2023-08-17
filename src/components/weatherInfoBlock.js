@@ -60,7 +60,7 @@ function WeatherDayBlock( { temp, feelsLike, wind, clouds, pressure, desc, date 
         <div className={ style }>
             <div className="flex space-x-3 items-center sm:space-x-8 md:space-x-0">
                 <div>
-                    <div className="pl-3 pr-4 flex items-center space-x-4 sm:pl-16 md:pl-2 md:flex-col">
+                    <div className="pl-3 pr-4 flex items-center space-x-2 sm:pl-16 md:pl-2 md:flex-col">
                         <img src={ weatherImg } alt="weather img." className="w-auto h-auto"></img>
                         <h1 className="text-3xl sm:text-5xl md:text-4xl md:mt-2"> { temp } °F </h1>
                     </div>
